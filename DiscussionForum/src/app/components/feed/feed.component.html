@@ -1,0 +1,63 @@
+<div class="container-xxl py-5" style="margin-left: 25%; ">
+    <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"></h1>
+        <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                <!-- Nav items... -->
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <!-- Loop through each post and create a div for each post -->
+                    <div class="post-item p-4 mb-4" style="border: 1px solid black;" *ngFor="let p of post | async">
+                        <div class="row g-4 ">
+                            <div class="col-sm-12 col-md-8 d-flex align-items-center ">
+                                <!-- <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-1.jpg" alt="" style="width: 80px; height: 80px;"> -->
+                                <div>
+                                    <h6 class="mb-3" style="text-align: left;">Topic: {{p.topic}}</h6>
+                                    <h4 class="mb-4">Question: {{p.content}}</h4>
+
+                                </div>
+
+                                <!-- <div class="post" style="margin-left: 25%; margin-top: 5px;">
+                                    <button  class="btn-primary btn-lg active"  style="color: rgb(3, 4, 2); background-color: rgb(64, 64, 239); font-size: medium; border-radius: 2px;" (click)="toggleLike()">{{ isLiked ? 'Unlike' : 'Like' }}</button>
+                                    <p>{{ likeCount }}</p>
+                                  </div>
+                            </div> -->
+
+                                <div
+                                    class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                    <div class="d-flex mb-3"
+                                        style="padding-left: 5px; padding-top: 200px; padding-right :550px;">
+                                        <button class="btn btn-light btn-square me-3"><i class="far fa-heart "
+                                                style="color:black" (click)="toggleLike()">{{ isLiked ? 'Unlike' :
+                                                'Like' }}</i></button>
+                                    </div>
+
+                                    <div>
+                                        <div class="post" style="padding-top: 2px; padding-right: 140px;">
+                                            <div class="btn-comment"
+                                                style="padding-left: 5px; padding-top: 25x; padding-right :400px;">
+                                                <button
+                                                    style="text-align: left; background-color: blue; font-size: medium;"
+                                                    (click)="addComment()"><b>Comment</b></button>
+                                            </div>
+                                            <div class="comments" style="padding-top: 5px;">
+                                                <textarea *ngFor="let comment of comments"
+                                                    class="comment">{{ comment }}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <button (click)="getAllPost(p.id)" class="btn">Detail</button> -->
+                                    <!-- </div>
+                        </div>
+                    </div>
+                    <!-- End of  loop -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

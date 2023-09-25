@@ -1,0 +1,10 @@
+select{
+    display:block;
+    background-color: rgba(226, 226, 226, 0.3);
+    border-radius: 0;
+    font-size: 16px;
+    margin:auto;
+    padding: 4px;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,255,0.4); 
+}

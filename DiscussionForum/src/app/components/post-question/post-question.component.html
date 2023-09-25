@@ -1,0 +1,59 @@
+<div [hidden]="submitted"
+    style="max-width: 800px; margin-left: 30%; margin-top: 5%; padding: 20px; background-color: #f5f5f5; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+
+    <h2 style="text-align: center; margin-bottom: 20px;">Post Question</h2>
+
+    <form (ngSubmit)="onsubmit()" style="margin-bottom: 0;">
+
+        <div class="form-group">
+            <label for="Topics"><b>Topic name:</b></label>
+            <input type="text" class="form-control" id="Topics" required [(ngModel)]="post.topic" name="topic" 
+            #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required>
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Topic is required
+                field</small>
+        </div>
+
+     
+
+        <!-- <div>
+            <label for="topic" style="font-size: large;"><b>Topic :</b></label>&nbsp; &nbsp;<br>
+            <select name="topic" id="topics">
+               
+            <input type="text" class="form-control" id="Topics" required [(ngModel)]="post.topic" name="topic">
+                <option value="">history</option>
+                <option value="Technology">Technology</option>
+                <option value="Science">Science</option>
+                <option value="Programming">Programming</option>
+                <option value="Economics">Economics</option>
+            </select>
+        </div> -->
+
+        <br>
+        <div class="form-group">
+            <label for="content"><b>
+                    <h4>Question :</h4>
+                </b></label>
+            <input type="text" class="form-control" id="content" required [(ngModel)]="post.content" name="content"
+                #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required>
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Question is required
+                field</small>
+        </div>
+
+
+    
+
+
+
+
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Post Question</button><br><br>
+            <button type="submit" class="btn btn-danger" routerLink="/home">Cancel</button>
+
+        </div>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>you submitted successfully !</h4>
+
+</div>

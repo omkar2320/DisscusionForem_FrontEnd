@@ -1,0 +1,42 @@
+h1{
+    background-color: rgb(211, 171, 86);
+}
+.btn{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
+}
+.navbar{
+    background-color: rgb(224, 24, 24);
+}
+.btn1{
+    background-color: rgb(23, 95, 158);
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn1:hover{
+    color: aquamarine;
+}
+.btn:hover{
+    color: rgb(0, 0, 0);
+}
+
+.dropdown{
+    font-size: large;
+    font:bold;
+    margin-left: 20px;
+    color: rgb(54, 38, 158);
+
+}
+select{
+    display:block;
+    background-color: rgba(0,0,80,0.3);
+    border-radius: 0;
+    font-size: 16px;
+    margin:auto;
+    padding: 4px;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,255,0.4); 
+}
